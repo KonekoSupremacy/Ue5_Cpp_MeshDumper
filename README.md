@@ -53,11 +53,3 @@ Configuring grid spacing, directories, alignment options, and triggering spawnin
 | `bScaleToMinimumSize` | `bool` | `false` | Enables scaling up small assets so they are at least `MinDimensionSize` on their largest axis. |
 | `MinDimensionSize` | `float` | `100.0` | The minimum bounding dimension threshold applied when scaling is active. |
 
----
-
-## 💻 C++ Implementation Highlights
-
-The tool utilizes:
-- `FAssetRegistryModule` & `FARFilter` to query assets efficiently in the Editor without loading everything into memory beforehand.
-- Bounding box extraction (`LoadedMesh->GetBounds()`) for precise floor alignment and scaling factors.
-- `CallInEditor` metadata specifier on C++ functions to generate user-friendly buttons in the Details Panel.
